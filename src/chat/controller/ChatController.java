@@ -67,7 +67,16 @@ public class ChatController
 			System.exit(0);
 		}
 		return answer;
-	}	
+	}
+	public void handleErrors(Exception error)
+	{
+		chatView.displayMessage("An error has occured. Details are on the way");
+		chatView.displayMessage(error.getMessage());
+	}
+	public ChatViewer getPopup()
+	{
+		return chatView;
+	}
 	/**
 	 * Takes a random topic and uses it 
 	 * @return
