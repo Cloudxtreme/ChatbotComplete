@@ -254,49 +254,6 @@ public class Chatbot
 	                }    
 	            }            
 	        }
-
-//		if(currentInput.contains("<B>"))
-//		{
-//			int index = currentInput.indexOf("<B>") + 3;
-//			String sub = currentInput.substring(index);
-//				
-//			if(sub.contains("</B>"))
-//			{
-//				inputHTML = true;
-//			}
-//		}
-//		else if(currentInput.contains("<I>"))
-//		{
-//			int index = currentInput.indexOf("<I>") + 3;
-//			String sub = currentInput.substring(index);
-//			
-//			if(sub.contains("</i>"))
-//			{
-//				inputHTML = true;
-//			}
-//		}
-//		else if(currentInput.contains("<P>"))
-//		{
-//				inputHTML = true;			
-//		}
-//		else if (currentInput.contains("A HREF=\""))
-//		{
-//			int index = currentInput.indexOf("A HREF=\"") + 9;
-//			String sub = currentInput.substring(index);
-//			
-//			if(sub.contains("\">"))
-//			{
-//				int index2 = sub.indexOf("\">");
-//				String sub2 = sub.substring(index2);
-//				
-//			}
-//				if(sub.contains("</a>"))
-//				{
-//					inputHTML = true;
-//				}
-//			
-//		}
-		
 		return inputHTML;
 	}
 	/**

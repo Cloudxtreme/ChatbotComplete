@@ -1,6 +1,7 @@
 package chat.controller;
 
 import chat.view.ChatViewer;
+import chat.model.CTECTwitter;
 import chat.model.Chatbot;
 import chat.view.ChatFrame;
 
@@ -9,6 +10,7 @@ public class ChatController
 	private Chatbot stupidBot; 
 	private ChatViewer chatView;
 	private ChatFrame baseFrame;
+	private CTECTwitter tweetBot;
 	/**
 	 * Gets the Chatbot, ChatViewer, and ChatFrame and makes it to variables
 	 */
@@ -16,6 +18,7 @@ public class ChatController
 	{
 		stupidBot= new Chatbot("Bob");
 		chatView = new ChatViewer();
+		tweetBot = new CTECTwitter(this);
 		baseFrame = new ChatFrame(this);
 	}
 	/**
@@ -67,7 +70,16 @@ public class ChatController
 			System.exit(0);
 		}
 		return answer;
-	}	
+	}
+	public void handleErrors(Exception error)
+	{
+		chatView.displayMessage("An error has occured. Details are on the way");
+		chatView.displayMessage(error.getMessage());
+	}
+	public ChatViewer getPopup()
+	{
+		return chatView;
+	}
 	/**
 	 * Takes a random topic and uses it 
 	 * @return
@@ -105,5 +117,11 @@ public class ChatController
 	{
 		return baseFrame;
 	}
+	
+	public void useTwitter(String text)
+	{
+		tweetBot.sentTweet(text);
+	}
+	
 }	
 
