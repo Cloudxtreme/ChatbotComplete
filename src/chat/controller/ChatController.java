@@ -120,7 +120,7 @@ public class ChatController
 	
 	public void useTwitter(String text)
 	{
-		tweetBot.sentTweet(text);
+		tweetBot.sendTweet(text);
 	}
 	
 	public String searchTwitter(String name)
