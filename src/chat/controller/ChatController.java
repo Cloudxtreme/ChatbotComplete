@@ -123,5 +123,13 @@ public class ChatController
 		tweetBot.sentTweet(text);
 	}
 	
+	public String searchTwitter(String name)
+	{
+		String results = "tThe top word fromt the user: " + name + " is ";
+		results += tweetBot.getMostPopularWord(name);
+		
+		return results;
+	}
+	
 }	
 
