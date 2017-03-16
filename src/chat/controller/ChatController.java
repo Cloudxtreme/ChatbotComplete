@@ -125,8 +125,9 @@ public class ChatController
 	
 	public String searchTwitter(String name)
 	{
-		String results = "tThe top word fromt the user: " + name + " is ";
-		results += tweetBot.getMostPopularWord(name);
+//		String results = "tThe top word from the user: " + name + " is ";
+//		results += tweetBot.getMostPopularWord(name);
+		String results = tweetBot.
 		
 		return results;
 	}
